@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beyond7 - Energie, Lebensfreude & Coaching</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Grundlegendes */
 *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
@@ -13,23 +13,35 @@ body {
     line-height:1.6; 
     color:#fff; 
     overflow-x:hidden; 
-    background: linear-gradient(135deg, #7da5a5, #8fb8b8, #7da5a5);
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #e6e6e6, #f2f2f2, #d9d9d9); /* Perlmutt Pastell */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 /* Navigation */
-nav { position:fixed; width:100%; background:#006666; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+nav { position:fixed; width:100%; background:#1a1a1a; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.2); z-index:100; }
 nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
 nav li { margin-left:20px; }
 nav a { color:white; font-weight:600; transition:0.3s; }
-nav a:hover { color:#ff9c3c; text-decoration:underline; }
+nav a:hover { color:#c0c0c0; text-decoration:underline; }
 
 /* Header */
 header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative; }
 header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
 header .logo img { width:70px; height:70px; }
-header h1 { font-weight:900; font-size:3em; color:#c0c0c0; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); margin:0; border:2px solid #ff9c3c; padding:5px 10px; border-radius:8px; }
-header p { font-size:1.2em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.4); }
+
+/* Überschrift: Silber, modern, eckig */
+header h1 {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight:700;
+    font-size:3em;
+    color:#c0c0c0; /* Silber */
+    border:2px solid #c0c0c0; 
+    padding:5px 10px;
+    border-radius:4px; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2); 
+}
+
+header p { font-size:1.2em; max-width:700px; line-height:1.6; color:#1a1a1a; }
 
 /* 3D-Heilige-Geometrie Buttons */
 .btn {
@@ -61,37 +73,37 @@ header p { font-size:1.2em; max-width:700px; line-height:1.6; text-shadow:1px 1p
     box-shadow: 0 12px 25px rgba(0,0,0,0.45), inset 0 -3px 8px rgba(255,255,255,0.2);
 }
 .btn span { position:relative; z-index:1; }
-.btn.sebastian { background: linear-gradient(135deg, #d68c36, #b76c12); }
-.btn.dana { background: linear-gradient(135deg, #008c8c, #00a0a0); }
-.btn.paar { background: linear-gradient(135deg,#008c8c,#d68c36); }
+.btn.sebastian { background: linear-gradient(135deg, #bfa45c, #d4af37); /* Gold */ color:#111;}
+.btn.dana { background: linear-gradient(135deg, #008c8c, #00a0a0); /* Petrol Akzent */ }
+.btn.paar { background: linear-gradient(135deg,#bfa45c,#008c8c); }
 
 /* Sektionen */
 section { padding:80px 20px; max-width:1200px; margin:0 auto; box-sizing:border-box; }
-section h2 { color:#ff9c3c; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 3px rgba(0,0,0,0.3); }
+section h2 { color:#bfa45c; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 2px rgba(0,0,0,0.2); }
 section h3 { text-align:center; margin-bottom:20px; }
 
 /* Textblöcke */
-.text-block { margin-bottom:40px; font-size:1.05em; }
+.text-block { margin-bottom:40px; font-size:1.05em; color:#1a1a1a; }
 
 /* Karten */
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; justify-items:center; }
 .card { padding:25px 20px 40px 20px; border-radius:12px; text-align:center; transition:0.3s; position:relative; 
-       background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.12)); 
-       backdrop-filter: blur(5px); width:100%; max-width:300px; box-sizing:border-box; }
-.card:hover { transform: translateY(-5px) scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.4); }
+       background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(200,200,200,0.15)); 
+       backdrop-filter: blur(5px); width:100%; max-width:300px; box-sizing:border-box; color:#1a1a1a;}
+.card:hover { transform: translateY(-5px) scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.35); }
 
 /* Karten Farben */
-.card.sebastian { background: linear-gradient(135deg, #d68c36, #b76c12); color:#111; }
+.card.sebastian { background: linear-gradient(135deg, #bfa45c, #d4af37); color:#111; }
 .card.dana { background: linear-gradient(135deg,#008c8c,#00a0a0); color:white; }
-.card.paar { background: linear-gradient(135deg,#008c8c,#d68c36); color:white; }
+.card.paar { background: linear-gradient(135deg,#008c8c,#bfa45c); color:white; }
 
 /* Karten Inhalte */
-.card img { width:90px; height:90px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
+.card img { width:90px; height:90px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.3)); }
 .card h3 { margin:10px 0; font-size:1.2em; font-weight:700; }
 .card p { font-size:1em; line-height:1.6; margin-bottom:0; }
 
 /* Footer */
-footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
+footer { text-align:center; padding:25px; background:#1a1a1a; color:#fff; }
 
 /* Responsive */
 @media (max-width:600px) {
@@ -153,65 +165,4 @@ footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
         <div class="card sebastian">
             <img src="https://img.icons8.com/fluency/96/apple.png" alt="Lebensmittelberatung">
             <h3>Lebensmittelberatung</h3>
-            <p>Heilendes Nähren: Individuelle Empfehlungen und Rezepte für mehr Energie.</p>
-        </div>
-        <div class="card sebastian">
-            <img src="https://img.icons8.com/fluency/96/cookbook.png" alt="Rezepte">
-            <h3>Erstellen von Rezepten</h3>
-            <p>Individuell angepasste Rezepte, die Körper und Geist unterstützen.</p>
-        </div>
-    </div>
-
-    <!-- Danas Angebote -->
-    <h3>Danas Angebote</h3>
-    <div class="cards">
-        <div class="card dana">
-            <img src="https://img.icons8.com/fluency/96/energy.png" alt="Basisanalyse">
-            <h3>Basisanalyse (Human Design)</h3>
-            <p>Erkenne deine energetische Signatur und individuelles Potenzial.</p>
-        </div>
-        <div class="card dana">
-            <img src="https://img.icons8.com/fluency/96/medical.png" alt="Energiemedizin">
-            <h3>EnergieMedizin</h3>
-            <p>Therapeutische Methoden für Körper, Geist und Energie.</p>
-        </div>
-        <div class="card dana">
-            <img src="https://img.icons8.com/fluency/96/coaching.png" alt="Coaching">
-            <h3>Coaching</h3>
-            <p>Individuelle Begleitung für mehr Energie, Klarheit und Lebensfreude.</p>
-        </div>
-        <div class="card dana">
-            <img src="https://img.icons8.com/fluency/96/mentor.png" alt="Mentoring">
-            <h3>Mentoring</h3>
-            <p>Langfristige Unterstützung, Strategien und energetische Begleitung.</p>
-        </div>
-        <div class="card dana">
-            <img src="https://img.icons8.com/fluency/96/therapy.png" alt="Trauma Release">
-            <h3>Trauma Release Practice</h3>
-            <p>Gezielte Methoden, um alte Blockaden zu lösen und innere Freiheit zu spüren.</p>
-        </div>
-    </div>
-
-    <!-- Paar Angebote -->
-    <h3>Paar Beratung</h3>
-    <div class="cards">
-        <div class="card paar">
-            <img src="https://img.icons8.com/fluency/96/heart.png" alt="Tao der Sexualität">
-            <h3>Tao der Sexualität</h3>
-            <p>Intensive Praxis für Verbindung, Intimität und Energiefluss zwischen Partnern.</p>
-        </div>
-        <div class="card paar">
-            <img src="https://img.icons8.com/fluency/96/pray.png" alt="Heiliger Raum der Dankbarkeit">
-            <h3>Der heilige Raum der Dankbarkeit</h3>
-            <p>Gemeinsame Rituale zur Vertiefung von Achtsamkeit, Wertschätzung und Energie.</p>
-        </div>
-    </div>
-
-</section>
-
-<footer>
-    &copy; 2025 Beyond7. Alle Rechte vorbehalten.
-</footer>
-
-</body>
-</html>
+            <p>Heilendes N
