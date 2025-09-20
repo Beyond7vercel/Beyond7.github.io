@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beyond7 - Energie, Lebensfreude & Coaching</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 /* Grundlegendes */
 *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
@@ -13,12 +13,13 @@ body {
     line-height:1.6; 
     color:#fff; 
     overflow-x:hidden; 
-    background: linear-gradient(135deg, #88b0b0, #70a0a0, #88b0b0, #a0c0c0); /* pastell Petrol */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
+    /* statischer Pastell-Petrol-Hintergrund */
+    background: linear-gradient(135deg, #7da5a5, #8fb8b8, #7da5a5);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 }
 
 /* Navigation */
-nav { position:fixed; width:100%; background:#007c7c; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+nav { position:fixed; width:100%; background:#006666; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
 nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
 nav li { margin-left:20px; }
 nav a { color:white; font-weight:600; transition:0.3s; }
@@ -28,28 +29,27 @@ nav a:hover { color:#ff9c3c; text-decoration:underline; }
 header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative; }
 header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
 header .logo img { width:70px; height:70px; }
-header h1 { font-weight:900; font-size:3em; color:#ff9c3c; -webkit-text-stroke: 1px #fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); margin:0; }
-header p { font-size:1.3em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.3); }
+header h1 { font-weight:900; font-size:3em; color:#ffffff; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); margin:0; border:2px solid #ff9c3c; padding:5px 10px; border-radius:8px; }
+header p { font-size:1.2em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.4); }
 
-/* Buttons einheitlich */
+/* Buttons */
 .btn {
-    display:inline-block; padding:18px 25px; margin:10px 10px 0 10px; font-weight:700; color:white; text-align:center;
-    border-radius:18% 45% 18% 45%; 
-    text-shadow:1px 1px 2px rgba(0,0,0,0.5);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3), inset 0 -3px 6px rgba(255,255,255,0.2);
+    display:inline-block; padding:18px 25px; margin:10px 10px 0 10px; font-weight:600; color:white; text-align:center;
+    border-radius:15%; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3), inset 0 -2px 4px rgba(255,255,255,0.15);
     transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
     text-decoration:none;
     font-size:1em;
 }
-.btn:hover { transform: rotateX(8deg) scale(1.08); box-shadow:0 10px 22px rgba(0,0,0,0.35), inset 0 -4px 8px rgba(255,255,255,0.25); filter: brightness(1.1); }
-/* Farblich einheitlich Petrol/Orange */
-.btn.sebastian { background: linear-gradient(135deg, #ff9c3c, #e67300); }
-.btn.dana { background: linear-gradient(135deg, #007c7c, #009191); }
-.btn.paar { background: linear-gradient(135deg, #007c7c, #ff9c3c); }
+.btn:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.35), inset 0 -3px 6px rgba(255,255,255,0.2); filter: brightness(1.05); }
+/* Farblich einheitlich */
+.btn.sebastian { background: linear-gradient(135deg, #d68c36, #b76c12); }
+.btn.dana { background: linear-gradient(135deg, #008c8c, #00a0a0); }
+.btn.paar { background: linear-gradient(135deg,#008c8c,#d68c36); }
 
 /* Sektionen */
 section { padding:80px 20px; max-width:1200px; margin:0 auto; box-sizing:border-box; }
-section h2 { color:#ff9c3c; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 4px rgba(0,0,0,0.3); }
+section h2 { color:#ff9c3c; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 3px rgba(0,0,0,0.3); }
 section h3 { text-align:center; margin-bottom:20px; }
 
 /* Textblöcke */
@@ -58,17 +58,17 @@ section h3 { text-align:center; margin-bottom:20px; }
 /* Karten */
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; justify-items:center; }
 .card { padding:25px 20px 40px 20px; border-radius:12px; text-align:center; transition:0.3s; position:relative; 
-       background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1)); 
+       background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.12)); 
        backdrop-filter: blur(5px); width:100%; max-width:300px; box-sizing:border-box; }
 .card:hover { transform: translateY(-5px) scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.4); }
 
-/* Einheitliche Farben für Karten */
-.card.sebastian { background: linear-gradient(135deg, #ff9c3c, #e67300); color:#111; }
-.card.dana { background: linear-gradient(135deg,#007c7c,#009191); color:white; }
-.card.paar { background: linear-gradient(135deg,#007c7c,#ff9c3c); color:white; }
+/* Karten Farben */
+.card.sebastian { background: linear-gradient(135deg, #d68c36, #b76c12); color:#111; }
+.card.dana { background: linear-gradient(135deg,#008c8c,#00a0a0); color:white; }
+.card.paar { background: linear-gradient(135deg,#008c8c,#d68c36); color:white; }
 
 /* Karten Inhalte */
-.card img { width:80px; height:80px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
+.card img { width:90px; height:90px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
 .card h3 { margin:10px 0; font-size:1.2em; font-weight:700; }
 .card p { font-size:1em; line-height:1.6; margin-bottom:0; }
 
@@ -81,7 +81,7 @@ footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
     header p { font-size:1em; }
     nav ul { flex-direction:column; align-items:center; }
     nav li { margin:10px 0; }
-    .card img { width:60px; height:60px; }
+    .card img { width:70px; height:70px; }
     .cards { grid-template-columns: 1fr; }
 }
 </style>
