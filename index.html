@@ -17,16 +17,39 @@ nav li { margin-left:20px; }
 nav a { color:white; font-weight:bold; transition:0.3s; }
 nav a:hover { text-decoration:underline; color:#00d4ff; }
 
-/* Header (Dana) */
-header { height:100vh; background: linear-gradient(135deg, #40e0d0, #1e90ff, #8a2be2, #ff69b4); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; padding:0 20px; }
-header h1 { font-size:3em; margin:0; text-shadow:1px 1px 4px rgba(0,0,0,0.3); }
-header p { font-size:1.2em; margin-top:20px; max-width:700px; line-height:1.5; text-shadow:1px 1px 4px rgba(0,0,0,0.2); }
-.btn { display:inline-block; padding:12px 25px; margin-top:20px; background:linear-gradient(45deg,#40e0d0,#ff69b4); color:white; font-weight:bold; border-radius:6px; transition:0.3s; }
+/* Header mit Perlmutschimmer */
+header { height:100vh; background: linear-gradient(135deg, #40e0d0, #1e90ff, #8a2be2, #ff69b4); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; padding:0 20px; position:relative; overflow:hidden; }
+header::after {
+    content:""; 
+    position:absolute; top:0; left:0; width:100%; height:100%; 
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.05) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    animation: shimmer 8s linear infinite;
+}
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(0); }
+    50% { transform: translateX(100%) translateY(50%); }
+    100% { transform: translateX(-100%) translateY(0); }
+}
+
+header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; position:relative; z-index:1; }
+header .logo img { width:60px; height:60px; }
+header h1 { font-family: 'Verdana', sans-serif; font-weight:900; font-size:3em; background: linear-gradient(45deg,#40e0d0,#1e90ff,#8a2be2,#ff69b4); -webkit-background-clip: text; color: transparent; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin:0; position:relative; z-index:1; }
+header p { font-size:1.2em; max-width:700px; line-height:1.5; text-shadow:1px 1px 4px rgba(0,0,0,0.2); position:relative; z-index:1; }
+.btn { display:inline-block; padding:12px 25px; margin-top:20px; background:linear-gradient(45deg,#40e0d0,#ff69b4); color:white; font-weight:bold; border-radius:6px; transition:0.3s; position:relative; z-index:1; }
 .btn:hover { background:linear-gradient(45deg,#1e90ff,#8a2be2); }
 
 /* Sektionen */
 section { padding:80px 20px; max-width:1000px; margin:0 auto; }
 section h2 { color:#4b6cb7; font-size:2em; margin-bottom:30px; text-align:center; }
+section h3 { text-align:center; margin-bottom:20px; }
+
+/* Textblöcke */
 .text-block { margin-bottom:40px; }
 
 /* Karten */
@@ -34,3 +57,146 @@ section h2 { color:#4b6cb7; font-size:2em; margin-bottom:30px; text-align:center
 .card { padding:20px; border-radius:12px; text-align:center; transition:0.3s; }
 
 /* Sebastian: Gold/Orange */
+.card.sebastian { background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00); color:#111; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+.card.sebastian:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.25); }
+
+/* Dana: Weiß/Arkturianisch */
+.card.dana { background:white; border:2px solid #00d4ff; color:#222; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.card.dana:hover { transform:translateY(-5px); border-color:#ff69b4; }
+
+/* Paar-Angebote: Farbverlauf Türkis → Lila → Pink */
+.card.paar { background: linear-gradient(135deg,#40e0d0,#8a2be2,#ff69b4); color:white; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+.card.paar:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.25); }
+
+/* Karten Inhalt */
+.card img { width:80px; height:80px; object-fit:cover; margin-bottom:15px; border-radius:50%; }
+.card h3 { margin:10px 0; }
+.card p { font-size:0.95em; line-height:1.4; }
+
+/* Footer */
+footer { text-align:center; padding:25px; background:#ddd; color:#555; }
+
+/* Responsive */
+@media (max-width:600px) {
+    header h1 { font-size:2em; }
+    header p { font-size:1em; }
+    nav ul { flex-direction:column; align-items:center; }
+    nav li { margin:10px 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#offers">Angebote</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <div class="logo">
+        <img src="https://via.placeholder.com/60?text=★" alt="Beyond7 Logo">
+        <h1>Beyond7</h1>
+    </div>
+    <p>
+        "Möchtest du mehr Energie und Lebensfreude entfachen?<br><br>
+        Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
+        und authentisches Energiemanagement."
+    </p>
+    <a href="#about" class="btn">Mehr erfahren</a>
+</header>
+
+<section id="about">
+    <h2>Über uns</h2>
+    <div class="text-block">
+        <p>
+        Wir sind Sebastian und Dana. Wir sind durch eigene Erfahrungen in der Schule des Lebens 
+        durch unsere dunkle Nacht der Seele gegangen und haben daraus sehr viel gelernt. 
+        Damit auch du von unseren Erkenntnissen profitieren kannst, haben wir Angebote erstellt, 
+        die dich unterstützen.
+        </p>
+    </div>
+</section>
+
+<section id="offers">
+    <h2>Angebote</h2>
+
+    <!-- Sebastians Angebote -->
+    <h3 style="color:#b8860b;">Sebastians Angebote</h3>
+    <div class="cards">
+        <div class="card sebastian">
+            <img src="https://via.placeholder.com/80?text=🍎" alt="Lebensmittelberatung">
+            <h3>Lebensmittelberatung</h3>
+            <p>Heilendes Nähren: Individuelle Empfehlungen und Rezepte für mehr Energie.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://via.placeholder.com/80?text=📖" alt="Rezepte">
+            <h3>Erstellen von Rezepten</h3>
+            <p>Individuell angepasste Rezepte, die Körper und Geist unterstützen.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://via.placeholder.com/80?text=💬" alt="Coaching">
+            <h3>Coaching</h3>
+            <p>Persönliche Begleitung zur Aktivierung deines Potenzials.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://via.placeholder.com/80?text=🧭" alt="Mentoring">
+            <h3>Mentoring</h3>
+            <p>Langfristige Unterstützung und Strategien für Lebensfreude & Energie.</p>
+        </div>
+    </div>
+
+    <!-- Danas Angebote -->
+    <h3 style="color:#8a2be2; margin-top:40px;">Danas Angebote</h3>
+    <div class="cards">
+        <div class="card dana">
+            <img src="https://via.placeholder.com/80?text=✨" alt="Basisanalyse">
+            <h3>Basisanalyse / Human Design</h3>
+            <p>Energetische Analyse und individuelle Empfehlungen für dein Wachstum.</p>
+        </div>
+        <div class="card dana">
+            <img src="https://via.placeholder.com/80?text=💫" alt="Energie Medizin">
+            <h3>Energie & Medizin</h3>
+            <p>Sanfte, ganzheitliche Energiearbeit zur Unterstützung deines Wohlbefindens.</p>
+        </div>
+    </div>
+
+    <!-- Paar-Angebote -->
+    <h3 style="color:#ff69b4; margin-top:40px;">Gemeinsame Angebote</h3>
+    <div class="cards">
+        <div class="card paar">
+            <img src="https://via.placeholder.com/80?text=🤝" alt="Gemeinsames Mentoring">
+            <h3>Gemeinsames Mentoring</h3>
+            <p>Individuelles und gemeinsames Coaching, um Energie & Lebensfreude zu synchronisieren.</p>
+        </div>
+        <div class="card paar">
+            <img src="https://via.placeholder.com/80?text=🌟" alt="Workshops">
+            <h3>Workshops & Retreats</h3>
+            <p>Gemeinsame Veranstaltungen für persönliche Weiterentwicklung und Energiearbeit.</p>
+        </div>
+    </div>
+
+    <div class="text-block" style="margin-top:40px;">
+        <p>
+            Wir von Beyond7 verbinden eigene Lebenserfahrung mit gesammeltem Wissen, klarem Verstand 
+            sowie Empathie, Herz und Menschlichkeit. Unsere Vision ist groß – so groß wie WIR. 
+            Fangen wir da an, wo wir stehen, und holen euch ab, wo ihr steht.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>Schreib uns eine Nachricht: <a href="mailto:kontakt@beyond7.de">kontakt@beyond7.de</a></p>
+    <p>Folge uns auf Social Media: <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+</section>
+
+<footer>
+    &copy; 2025 Beyond7. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
