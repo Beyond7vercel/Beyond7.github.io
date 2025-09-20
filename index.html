@@ -13,30 +13,23 @@ body {
     line-height:1.6; 
     color:#fff; 
     overflow-x:hidden; 
-    /* Perlmutt-Schimmer Hintergrund */
-    background: linear-gradient(135deg, #f0f0f5, #d0d0e8, #c0d0e0, #e0e0f2);
-    background-size: 400% 400%;
+    /* Pastell Petrol Hintergrund */
+    background: linear-gradient(135deg, #a0c0c0, #88b0b0, #70a0a0, #88b0b0);
     text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 }
 
 /* Navigation */
-nav { position:fixed; width:100%; background:#40e0d0; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+nav { position:fixed; width:100%; background:#007c7c; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
 nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
 nav li { margin-left:20px; }
 nav a { color:white; font-weight:600; transition:0.3s; }
-nav a:hover { text-decoration:underline; color:#ffeddb; }
+nav a:hover { text-decoration:underline; color:#ff9c3c; }
 
 /* Header */
-header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative;
-    background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0)); 
-}
+header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative; }
 header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
 header .logo img { width:70px; height:70px; }
-header h1 { font-weight:900; font-size:3em; 
-            color:silver; 
-            -webkit-text-stroke: 1px #fff; /* feine Umrandung */
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.4); 
-            margin:0; }
+header h1 { font-weight:900; font-size:3em; color:#ff9c3c; -webkit-text-stroke: 1px #fff; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); margin:0; }
 header p { font-size:1.3em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.3); }
 
 /* Buttons */
@@ -50,13 +43,13 @@ header p { font-size:1.3em; max-width:700px; line-height:1.6; text-shadow:1px 1p
     font-size:1em;
 }
 .btn:hover { transform: rotateX(8deg) scale(1.08); box-shadow:0 10px 22px rgba(0,0,0,0.35), inset 0 -4px 8px rgba(255,255,255,0.25); filter: brightness(1.1); }
-.btn.sebastian { background: linear-gradient(135deg, #FFD700, #E6C200, #BFA300); }
-.btn.dana { background: linear-gradient(135deg, #40e0d0, #1e90ff); }
-.btn.paar { background: linear-gradient(135deg,#8a2be2,#ff69b4); }
+.btn.sebastian { background: linear-gradient(135deg, #ff9c3c, #ff7f2c, #e67300); }
+.btn.dana { background: linear-gradient(135deg, #007c7c, #009191); }
+.btn.paar { background: linear-gradient(135deg,#007c7c,#ff9c3c); }
 
 /* Sektionen */
 section { padding:80px 20px; max-width:1200px; margin:0 auto; box-sizing:border-box; }
-section h2 { color:#ffd700; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 4px rgba(0,0,0,0.3); }
+section h2 { color:#ff9c3c; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 4px rgba(0,0,0,0.3); }
 section h3 { text-align:center; margin-bottom:20px; }
 
 /* Textblöcke */
@@ -70,9 +63,9 @@ section h3 { text-align:center; margin-bottom:20px; }
 .card:hover { transform: translateY(-5px) scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.4); }
 
 /* Spezifische Kartenfarben */
-.card.sebastian { background: linear-gradient(135deg, #FFD700, #E6C200, #BFA300); color:#111; }
-.card.dana { background: linear-gradient(135deg,#40e0d0,#1e90ff); color:white; }
-.card.paar { background: linear-gradient(135deg,#8a2be2,#ff69b4); color:white; }
+.card.sebastian { background: linear-gradient(135deg, #ff9c3c, #ff7f2c, #e67300); color:#111; }
+.card.dana { background: linear-gradient(135deg,#007c7c,#009191); color:white; }
+.card.paar { background: linear-gradient(135deg,#007c7c,#ff9c3c); color:white; }
 
 /* Karten Inhalte */
 .card img { width:80px; height:80px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
