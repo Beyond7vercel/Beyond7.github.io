@@ -13,23 +13,30 @@ body {
     line-height:1.6; 
     color:#fff; 
     overflow-x:hidden; 
-    background: linear-gradient(135deg, #cfd6e0, #e8e8f0, #d0cfe0);
+    /* Perlmutt-Schimmer Hintergrund */
+    background: linear-gradient(135deg, #f0f0f5, #d0d0e8, #c0d0e0, #e0e0f2);
+    background-size: 400% 400%;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.25);
 }
 
 /* Navigation */
-nav { position:fixed; width:100%; background:#1a1a2e; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+nav { position:fixed; width:100%; background:#40e0d0; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
 nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
 nav li { margin-left:20px; }
 nav a { color:white; font-weight:600; transition:0.3s; }
-nav a:hover { text-decoration:underline; color:#00d4ff; }
+nav a:hover { text-decoration:underline; color:#ffeddb; }
 
 /* Header */
-header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative; }
+header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0)); 
+}
 header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
 header .logo img { width:70px; height:70px; }
 header h1 { font-weight:900; font-size:3em; 
-            background: linear-gradient(45deg,#40e0d0,#1e90ff,#8a2be2,#ff69b4); 
-            -webkit-background-clip: text; color: transparent; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); margin:0; }
+            color:silver; 
+            -webkit-text-stroke: 1px #fff; /* feine Umrandung */
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4); 
+            margin:0; }
 header p { font-size:1.3em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.3); }
 
 /* Buttons */
@@ -142,21 +149,6 @@ footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
             <h3>Erstellen von Rezepten</h3>
             <p>Individuell angepasste Rezepte, die Körper und Geist unterstützen.</p>
         </div>
-        <div class="card sebastian">
-            <img src="https://img.icons8.com/fluency/96/coaching.png" alt="Coaching">
-            <h3>Coaching</h3>
-            <p>Persönliche Begleitung zur Aktivierung deines Potenzials.</p>
-        </div>
-        <div class="card sebastian">
-            <img src="https://img.icons8.com/fluency/96/mentor.png" alt="Mentoring">
-            <h3>Mentoring</h3>
-            <p>Langfristige Unterstützung und Strategien für Lebensfreude & Energie.</p>
-        </div>
-        <div class="card sebastian">
-            <img src="https://img.icons8.com/fluency/96/therapy.png" alt="Trauma Release">
-            <h3>Trauma Release Practice</h3>
-            <p>Gezielte Methoden, um alte Blockaden zu lösen und innere Freiheit zu spüren.</p>
-        </div>
     </div>
 
     <!-- Danas Angebote -->
@@ -171,6 +163,21 @@ footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
             <img src="https://img.icons8.com/fluency/96/medical.png" alt="Energiemedizin">
             <h3>EnergieMedizin</h3>
             <p>Therapeutische Methoden für Körper, Geist und Energie.</p>
+        </div>
+        <div class="card dana">
+            <img src="https://img.icons8.com/fluency/96/coaching.png" alt="Coaching">
+            <h3>Coaching</h3>
+            <p>Persönliche Begleitung zur Aktivierung deines Potenzials.</p>
+        </div>
+        <div class="card dana">
+            <img src="https://img.icons8.com/fluency/96/mentor.png" alt="Mentoring">
+            <h3>Mentoring</h3>
+            <p>Langfristige Unterstützung und Strategien für Lebensfreude & Energie.</p>
+        </div>
+        <div class="card dana">
+            <img src="https://img.icons8.com/fluency/96/therapy.png" alt="Trauma Release">
+            <h3>Trauma Release Practice</h3>
+            <p>Gezielte Methoden, um alte Blockaden zu lösen und innere Freiheit zu spüren.</p>
         </div>
     </div>
 
