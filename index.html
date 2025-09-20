@@ -1,66 +1,143 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond7 - Bewusstsein & Coaching</title>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
-            overflow-x: hidden;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond7 - Energie, Lebensfreude & Coaching</title>
+<style>
+/* Grundlegendes */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin:0; padding:0; font-family: 'Arial', sans-serif; line-height:1.6; background:#f9f9f9; color:#333; overflow-x:hidden; }
+a { text-decoration:none; color:inherit; }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            width: 100%;
-            background-color: #4b6cb7;
-            color: white;
-            padding: 15px 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-        }
-        nav li { margin-left: 20px; }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover { text-decoration: underline; }
+/* Navigation */
+nav { position:fixed; width:100%; background:#4b6cb7; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
+nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
+nav li { margin-left:20px; }
+nav a { color:white; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
 
-        /* Header */
-        header {
-            height: 100vh;
-            background: linear-gradient(rgba(75,108,183,0.7), rgba(75,108,183,0.7)), url('https://via.placeholder.com/1600x900') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-        header h1 { font-size: 3em; margin: 0; }
-        header p { font-size: 1.2em; margin-top: 20px; max-width: 700px; }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: white;
-            color: #4b6cb7;
-            text-decoration: none;
-            font-weight: bold
+/* Header */
+header { height:100vh; background: linear-gradient(rgba(75,108,183,0.7), rgba(75,108,183,0.7)), url('https://via.placeholder.com/1600x900') center/cover no-repeat; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; padding:0 20px; }
+header h1 { font-size:3em; margin:0; }
+header p { font-size:1.2em; margin-top:20px; max-width:700px; line-height:1.5; }
+.btn { display:inline-block; padding:12px 25px; margin-top:20px; background:white; color:#4b6cb7; font-weight:bold; border-radius:6px; transition:0.3s; }
+.btn:hover { background:#e0e0e0; }
+
+/* Sektionen */
+section { padding:80px 20px; max-width:1000px; margin:0 auto; }
+section h2 { color:#4b6cb7; font-size:2em; margin-bottom:30px; text-align:center; }
+.text-block { margin-bottom:40px; }
+
+/* Karten */
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:white; padding:20px; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); text-align:center; transition:0.3s; }
+.card:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.15); }
+.card img { width:80px; height:80px; object-fit:cover; margin-bottom:15px; border-radius:50%; }
+.card h3 { margin:10px 0; color:#4b6cb7; }
+.card p { font-size:0.95em; line-height:1.4; }
+
+/* Footer */
+footer { text-align:center; padding:25px; background:#ddd; color:#555; }
+
+/* Responsive */
+@media (max-width:600px) {
+    header h1 { font-size:2em; }
+    header p { font-size:1em; }
+    nav ul { flex-direction:column; align-items:center; }
+    nav li { margin:10px 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#offers">Angebote</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+    </ul>
+</nav>
+
+<header id="home">
+    <h1>Beyond7</h1>
+    <p>
+        "Möchtest du mehr Energie und Lebensfreude entfachen?<br><br>
+        Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
+        und authentisches Energiemanagement."
+    </p>
+    <a href="#about" class="btn">Mehr erfahren</a>
+</header>
+
+<section id="about">
+    <h2>Über uns</h2>
+    <div class="text-block">
+        <p>
+        Wir sind Sebastian und Dana. Wir sind durch eigene Erfahrungen in der Schule des Lebens 
+        durch unsere dunkle Nacht der Seele gegangen und haben daraus sehr viel gelernt. 
+        Damit auch du von unseren Erkenntnissen profitieren kannst, haben wir Angebote erstellt, 
+        die dich unterstützen.
+        </p>
+    </div>
+</section>
+
+<section id="offers">
+    <h2>Angebote</h2>
+
+    <div class="cards">
+        <!-- Sebastian -->
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=🍎" alt="Lebensmittelberatung">
+            <h3>Lebensmittelberatung</h3>
+            <p>Heilendes Nähren: Individuelle Empfehlungen und Rezepte für mehr Energie.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=📖" alt="Rezepte">
+            <h3>Erstellen von Rezepten</h3>
+            <p>Individuell angepasste Rezepte, die Körper und Geist unterstützen.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=💬" alt="Coaching">
+            <h3>Coaching</h3>
+            <p>Persönliche Begleitung zur Aktivierung deines Potenzials.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=🧭" alt="Mentoring">
+            <h3>Mentoring</h3>
+            <p>Langfristige Unterstützung und Strategien für Lebensfreude & Energie.</p>
+        </div>
+        <!-- Dana -->
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=✨" alt="Basisanalyse">
+            <h3>Basisanalyse / Human Design</h3>
+            <p>Energetische Analyse und individuelle Empfehlungen für dein Wachstum.</p>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/80?text=💫" alt="Energie Medizin">
+            <h3>Energie & Medizin</h3>
+            <p>Sanfte, ganzheitliche Energiearbeit zur Unterstützung deines Wohlbefindens.</p>
+        </div>
+    </div>
+
+    <div class="text-block" style="margin-top:40px;">
+        <p>
+            Wir von Beyond7 verbinden eigene Lebenserfahrung mit gesammeltem Wissen, klarem Verstand 
+            sowie Empathie, Herz und Menschlichkeit. Unsere Vision ist groß – so groß wie WIR. 
+            Fangen wir da an, wo wir stehen, und holen euch ab, wo ihr steht.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>Schreib uns eine Nachricht: <a href="mailto:kontakt@beyond7.de">kontakt@beyond7.de</a></p>
+    <p>Folge uns auf Social Media: <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+</section>
+
+<footer>
+    &copy; 2025 Beyond7. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
