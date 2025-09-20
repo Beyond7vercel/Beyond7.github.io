@@ -2,90 +2,22 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><!DOCTYPE html>
-
-/* Karten Inhalt - Logos größer und sichtbar */
-.card img { width:80px; height:80px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
-.card h3 { margin:10px 0; font-size:1.2em; font-weight:700; }
-.card p { font-size:1em; line-height:1.6; margin-bottom:0; }
-
-/* Footer */
-footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
-
-/* Responsive */
-@media (max-width:600px) {
-    header h1 { font-size:2em; }
-    header p { font-size:1em; }
-    nav ul { flex-direction:column; align-items:center; }
-    nav li { margin:10px 0; }
-    .card img { width:60px; height:60px; }
-}
-</style>
-</head>
-<body>
-
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#offers">Angebote</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-    </ul>
-</nav>
-
-<header id="home">
-    <div class="logo">
-        <img src="https://via.placeholder.com/70?text=★" alt="Beyond7 Logo">
-        <h1>Beyond7</h1>
-    </div>
-    <p>
-        "Möchtest du mehr Energie und Lebensfreude entfachen?<br><br>
-        Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
-        und authentisches Energiemanagement."
-    </p>
-    <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Beratung</a>
-    <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Beratung</a>
-    <a href="https://t.me/Beyond7_Gemeinsam" class="btn">Paar Beratung</a>
-</header>
-
-<!-- Angebote Section und Karten kommen hier, mit den aktualisierten Buttons und Glanz-Effekt -->
-
-t="Beyond7 Logo">
-        <h1>Beyond7</h1>
-    </div>
-    <p>
-        "Möchtest du mehr Energie und Lebensfreude entfachen?<br><br>
-        Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
-        und authentisches Energiemanagement."
-    </p>
-    <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Beratung</a>
-    <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Beratung</a>
-    <a href="https://t.me/Beyond7_Gemeinsam" class="btn">Paar Beratung</a>
-</header>
-
-<!-- Angebote Section und Karten kommen hier, mit den aktualisierten Buttons und Glanz-Effekt -->
-
-scale=1.0">
-<title>Beyond7 - Energie, Lebensfreude & Coaching</title>
-<style>
-/* Grundlegendes */
-*, *::before, *::after { box-sizing: border-box; }
-body { margin:0; padding:0; font-family: 'Arial', sans-serif; line-height:1.6; 
-       background: linear-gradient(135deg, #f0f0f5, #e6e6fa, #f5f5f5); color:#222; overflow-x:hidden; }
-a { text-decoration:none; color:inherit; }
-
-/* Navigation */
-nav { position:fixed; width:100%; background:#1a1a2e; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
-nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beyond7 - Energie, Lebensfreude & Coaching</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
 /* Grundlegendes */
 *, *::before, *::after { box-sizing: border-box; }
-body { margin:0; padding:0; font-family: 'Poppins', sans-serif; line-height:1.6; 
-       background: linear-gradient(135deg, #9f9fbf, #cfcfe8, #aab0c4); color:#fff; overflow-x:hidden; }
-a { text-decoration:none; color:inherit; }
+body { 
+    margin:0; 
+    padding:0; 
+    font-family: 'Poppins', sans-serif; 
+    line-height:1.6; 
+    color:#fff; 
+    overflow-x:hidden; 
+    /* Perlmutt-Schimmer Hintergrund */
+    background: linear-gradient(135deg, #cfd6e0, #e8e8f0, #d0cfe0);
+}
 
 /* Navigation */
 nav { position:fixed; width:100%; background:#1a1a2e; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
@@ -95,14 +27,15 @@ nav a { color:white; font-weight:600; transition:0.3s; }
 nav a:hover { text-decoration:underline; color:#00d4ff; }
 
 /* Header */
-header { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:white; padding:0 20px; position:relative; overflow:hidden; }
+header { height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative; overflow:hidden; }
 header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
 header .logo img { width:70px; height:70px; }
 header h1 { font-weight:900; font-size:3em; 
-            background: linear-gradient(45deg,#40e0d0,#1e90ff,#8a2be2,#ff69b4); -webkit-background-clip: text; color: transparent; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); margin:0; }
+            background: linear-gradient(45deg,#40e0d0,#1e90ff,#8a2be2,#ff69b4); 
+            -webkit-background-clip: text; color: transparent; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); margin:0; }
 header p { font-size:1.3em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.3); }
 
-/* Buttons: stylische 3D-heilige-Geometrie + Glanz */
+/* Buttons */
 .btn {
     display:inline-block; padding:18px 25px; margin-top:20px; font-weight:700; color:white; text-align:center;
     border-radius:18% 45% 18% 45%; 
@@ -114,75 +47,32 @@ header p { font-size:1.3em; max-width:700px; line-height:1.6; text-shadow:1px 1p
 }
 .btn:hover { transform: rotateX(8deg) scale(1.08); box-shadow:0 10px 22px rgba(0,0,0,0.35), inset 0 -4px 8px rgba(255,255,255,0.25); filter: brightness(1.1); }
 
-/* Sebastian Button gold */
+/* Button Farben */
 .btn.sebastian { background: linear-gradient(135deg, #FFD700, #E6C200, #BFA300); }
-
-/* Dana Button türkis-blau */
 .btn.dana { background: linear-gradient(135deg, #40e0d0, #1e90ff); }
+.btn.paar { background: linear-gradient(135deg,#8a2be2,#ff69b4); }
 
 /* Sektionen */
 section { padding:80px 20px; max-width:1000px; margin:0 auto; }
 section h2 { color:#ffd700; font-size:2em; margin-bottom:30px; text-align:center; text-shadow:1px 1px 4px rgba(0,0,0,0.3); }
 section h3 { text-align:center; margin-bottom:20px; }
 
+/* Textblöcke */
+.text-block { margin-bottom:40px; font-size:1.05em; }
+
 /* Karten */
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
 .card { padding:25px 20px 40px 20px; border-radius:12px; text-align:center; transition:0.3s; position:relative; 
        background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1)); 
        backdrop-filter: blur(5px); }
-
-/* Karten Hover Glanz */
 .card:hover { transform: translateY(-5px) scale(1.02); box-shadow:0 10px 25px rgba(0,0,0,0.4); }
 
-/* Sebastian-Karten */
+/* Spezifische Kartenfarben */
 .card.sebastian { background: linear-gradient(135deg, #FFD700, #E6C200, #BFA300); color:#111; }
-.card.sebastian:hover { filter: brightness(1.08); }
-
-/* Dana-Karten */
 .card.dana { background: linear-gradient(135deg,#40e0d0,#1e90ff); color:white; }
-.card.dana:hover { filter: brightness(1.08); }
-
-/* Paar-Karten */
 .card.paar { background: linear-gradient(135deg,#8a2be2,#ff69b4); color:white; }
-.card.paar:hover { filter: brightness(1.08); }
 
-/* Karten Inhalt - Logos größer und sichtbar */
-.card img { width:80px; height:80px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
-.card h3 { margin:10px 0; font-size:1.2em; font-weight:700; }
-.card p { font-size:1em; line-height:1.6; margin-bottom:0; }
-
-/* Footer */
-footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
-
-/* Responsive */
-@media (max-width:600px) {
-    header h1 { font-size:2em; }
-    header p { font-size:1em; }
-    nav ul { flex-direction:column; align-items:center; }
-    nav li { margin:10px 0; }
-    .card img { width:60px; height:60px; }
-}
-</style>
-</head>
-<body>
-
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#offers">Angebote</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-    </ul>
-</nav>
-
-<header id="home">
-    <div class="logo">
-        <img src="https://via.placeholder.com/70?text=★" alt="Beyond7 Logo">
-        <h1>Beyond7</h1>
-    </div>
-    <p><!DOCTYPE html>
-
-/* Karten Inhalt - Logos größer und sichtbar */
+/* Karten Inhalte */
 .card img { width:80px; height:80px; object-fit:contain; margin-bottom:15px; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.5)); }
 .card h3 { margin:10px 0; font-size:1.2em; font-weight:700; }
 .card p { font-size:1em; line-height:1.6; margin-bottom:0; }
@@ -223,47 +113,89 @@ footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
     </p>
     <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Beratung</a>
     <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Beratung</a>
-    <a href="https://t.me/Beyond7_Gemeinsam" class="btn">Paar Beratung</a>
+    <a href="https://t.me/Beyond7_Gemeinsam" class="btn paar">Paar Beratung</a>
 </header>
 
-<!-- Angebote Section und Karten kommen hier, mit den aktualisierten Buttons und Glanz-Effekt -->
-
-t="Beyond7 Logo">
-        <h1>Beyond7</h1>
+<section id="about">
+    <h2>Über uns</h2>
+    <div class="text-block">
+        <p>
+        Wir sind Sebastian und Dana. Wir sind durch eigene Erfahrungen in der Schule des Lebens 
+        durch unsere dunkle Nacht der Seele gegangen und haben daraus sehr viel gelernt. 
+        Damit auch du von unseren Erkenntnissen profitieren kannst, haben wir Angebote erstellt, 
+        die dich unterstützen.
+        </p>
     </div>
-    <p>
-        "Möchtest du mehr Energie und Lebensfreude entfachen?<br><br>
-        Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
-        und authentisches Energiemanagement."
-    </p>
-    <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Beratung</a>
-    <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Beratung</a>
-    <a href="https://t.me/Beyond7_Gemeinsam" class="btn">Paar Beratung</a>
-</header>
+</section>
 
-<!-- Angebote Section und Karten kommen hier, mit den aktualisierten Buttons und Glanz-Effekt -->
+<section id="offers">
+    <h2>Angebote</h2>
 
-scale=1.0">
-<title>Beyond7 - Energie, Lebensfreude & Coaching</title>
-<style>
-/* Grundlegendes */
-*, *::before, *::after { box-sizing: border-box; }
-body { margin:0; padding:0; font-family: 'Arial', sans-serif; line-height:1.6; 
-       background: linear-gradient(135deg, #f0f0f5, #e6e6fa, #f5f5f5); color:#222; overflow-x:hidden; }
-a { text-decoration:none; color:inherit; }
+    <!-- Sebastians Angebote -->
+    <h3>Sebastians Angebote</h3>
+    <div class="cards">
+        <div class="card sebastian">
+            <img src="https://img.icons8.com/fluency/96/apple.png" alt="Lebensmittelberatung">
+            <h3>Lebensmittelberatung</h3>
+            <p>Heilendes Nähren: Individuelle Empfehlungen und Rezepte für mehr Energie.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://img.icons8.com/fluency/96/cookbook.png" alt="Rezepte">
+            <h3>Erstellen von Rezepten</h3>
+            <p>Individuell angepasste Rezepte, die Körper und Geist unterstützen.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://img.icons8.com/fluency/96/coaching.png" alt="Coaching">
+            <h3>Coaching</h3>
+            <p>Persönliche Begleitung zur Aktivierung deines Potenzials.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://img.icons8.com/fluency/96/mentor.png" alt="Mentoring">
+            <h3>Mentoring</h3>
+            <p>Langfristige Unterstützung und Strategien für Lebensfreude & Energie.</p>
+        </div>
+        <div class="card sebastian">
+            <img src="https://img.icons8.com/fluency/96/therapy.png" alt="Trauma Release">
+            <h3>Trauma Release Practice</h3>
+            <p>Gezielte Methoden, um alte Blockaden zu lösen und innere Freiheit zu spüren.</p>
+        </div>
+    </div>
 
-/* Navigation */
-nav { position:fixed; width:100%; background:#1a1a2e; color:white; padding:15px 20px; box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100; }
-nav ul { list-style:none; display:flex; justify-content:flex-end; margin:0; padding:0; flex-wrap:wrap; }
+    <!-- Danas Angebote -->
+    <h3>Danas Angebote</h3>
+    <div class="cards">
+        <div class="card dana">
+            <img src="https://img.icons8.com/fluency/96/energy.png" alt="Basisanalyse">
+            <h3>Basisanalyse (Human Design)</h3>
+            <p>Erkenne deine energetische Signatur und individuelles Potenzial.</p>
+        </div>
+        <div class="card dana">
+            <img src="https://img.icons8.com/fluency/96/medical.png" alt="Energiemedizin">
+            <h3>EnergieMedizin</h3>
+            <p>Therapeutische Methoden für Körper, Geist und Energie.</p>
+        </div>
+    </div>
 
-        "Möchtest du mehr Energie und Lebensfreude entfachen?<br><br>
-        Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
-        und authentisches Energiemanagement."
-    </p>
-    <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Coaching/Mentoring</a>
-    <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Coaching/Mentoring</a>
-    <a href="https://t.me/Beyond7_Gemeinsam" class="btn">Paar Beratung/Workshops</a>
-</header>
+    <!-- Paar Angebote -->
+    <h3>Paar Beratung</h3>
+    <div class="cards">
+        <div class="card paar">
+            <img src="https://img.icons8.com/fluency/96/heart.png" alt="Tao der Sexualität">
+            <h3>Tao der Sexualität</h3>
+            <p>Intensive Praxis für Verbindung, Intimität und Energiefluss zwischen Partnern.</p>
+        </div>
+        <div class="card paar">
+            <img src="https://img.icons8.com/fluency/96/pray.png" alt="Heiliger Raum der Dankbarkeit">
+            <h3>Der heilige Raum der Dankbarkeit</h3>
+            <p>Gemeinsame Rituale zur Vertiefung von Achtsamkeit, Wertschätzung und Energie.</p>
+        </div>
+    </div>
 
-<!-- Angebote Section und Karten kommen hier, mit den aktualisierten Buttons und Glanz-Effekt -->
+</section>
 
+<footer>
+    &copy; 2025 Beyond7. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
