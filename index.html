@@ -8,7 +8,7 @@
 /* Grundlegendes */
 *, *::before, *::after { box-sizing: border-box; }
 body { margin:0; padding:0; font-family: 'Arial', sans-serif; line-height:1.6; 
-       background: linear-gradient(135deg, #dbe9f4, #e6e0f8, #f8e6f4); color:#222; overflow-x:hidden; }
+       background: linear-gradient(135deg, #e0e0e0, #f2f2f2, #dcdcdc); color:#222; overflow-x:hidden; }
 a { text-decoration:none; color:inherit; }
 
 /* Navigation */
@@ -25,14 +25,23 @@ header .logo img { width:60px; height:60px; }
 header h1 { font-family: 'Verdana', sans-serif; font-weight:900; font-size:3em; 
             background: linear-gradient(45deg,#40e0d0,#1e90ff,#8a2be2,#ff69b4); -webkit-background-clip: text; color: transparent; text-shadow: 2px 2px 5px rgba(0,0,0,0.3); margin:0; }
 header p { font-size:1.2em; max-width:700px; line-height:1.5; text-shadow:1px 1px 4px rgba(0,0,0,0.2); }
+
+/* Buttons: 3D-heilige-Geometrie-Look */
 .btn {
-    display:inline-block; padding:15px 25px; margin-top:20px; font-weight:bold; color:white; text-align:center;
-    border-radius:50% 20% 50% 20%; /* Heiliger Geometrie-Look */
-    background: linear-gradient(135deg,#40e0d0,#8a2be2,#ff69b4);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    display:inline-block; padding:20px 25px; margin-top:20px; font-weight:bold; color:white; text-align:center;
+    border-radius:20% 50% 20% 50%; /* geometrisch, leicht 3D */
+    text-shadow:1px 1px 2px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3), inset 0 -3px 6px rgba(0,0,0,0.2);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration:none;
 }
-.btn:hover { transform: scale(1.1) rotate(5deg); box-shadow:0 6px 15px rgba(0,0,0,0.35); }
+.btn:hover { transform: rotateX(10deg) scale(1.1); box-shadow:0 8px 18px rgba(0,0,0,0.35), inset 0 -4px 8px rgba(0,0,0,0.25); }
+
+/* Sebastian Button gold */
+.btn.sebastian { background: linear-gradient(135deg, #FFD700, #E6C200, #BFA300); }
+
+/* Dana Button türkis */
+.btn.dana { background: linear-gradient(135deg, #40e0d0, #1e90ff); }
 
 /* Sektionen */
 section { padding:80px 20px; max-width:1000px; margin:0 auto; }
@@ -46,15 +55,15 @@ section h3 { text-align:center; margin-bottom:20px; }
 .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
 .card { padding:25px 20px 40px 20px; border-radius:12px; text-align:center; transition:0.3s; }
 
-/* Sebastian: edles Gold */
+/* Sebastian-Karten */
 .card.sebastian { background: linear-gradient(135deg, #FFD700, #E6C200, #BFA300); color:#111; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
 .card.sebastian:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.25); }
 
-/* Dana: Weiß/Arkturianisch */
+/* Dana-Karten */
 .card.dana { background:white; border:2px solid #00d4ff; color:#222; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
 .card.dana:hover { transform:translateY(-5px); border-color:#ff69b4; }
 
-/* Paar-Angebote: Farbverlauf Türkis → Lila → Pink */
+/* Paar-Karten */
 .card.paar { background: linear-gradient(135deg,#40e0d0,#8a2be2,#ff69b4); color:white; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
 .card.paar:hover { transform:translateY(-5px); box-shadow:0 6px 15px rgba(0,0,0,0.25); }
 
@@ -96,8 +105,8 @@ footer { text-align:center; padding:25px; background:#ddd; color:#555; }
         Dann entfalte dein individuelles Potenzial durchs Erkennen deiner Signatur 
         und authentisches Energiemanagement."
     </p>
-    <a href="https://t.me/Beyond7_Sebastian" class="btn">Sebastian Beratung</a>
-    <a href="https://t.me/Beyond7_Dana" class="btn">Dana Beratung</a>
+    <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Beratung</a>
+    <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Beratung</a>
     <a href="https://t.me/Beyond7_Gemeinsam" class="btn">Paar Beratung</a>
 </header>
 
@@ -154,6 +163,11 @@ footer { text-align:center; padding:25px; background:#ddd; color:#555; }
             <h3>Energie & Medizin</h3>
             <p>Sanfte, ganzheitliche Energiearbeit zur Unterstützung deines Wohlbefindens.</p>
         </div>
+        <div class="card dana">
+            <img src="https://via.placeholder.com/80?text=🌀" alt="Trauma Release">
+            <h3>Trauma Release Practice</h3>
+            <p>Sanfte und gezielte Praxis, um alte Blockaden zu lösen und Energie frei fließen zu lassen.</p>
+        </div>
     </div>
 
     <!-- Paar-Angebote -->
@@ -161,3 +175,44 @@ footer { text-align:center; padding:25px; background:#ddd; color:#555; }
     <div class="cards">
         <div class="card paar">
             <img src="https://via.placeholder.com/80?text=🤝" alt="Gemeinsames Mentoring">
+            <h3>Gemeinsames Mentoring</h3>
+            <p>Individuelles und gemeinsames Coaching, um Energie & Lebensfreude zu synchronisieren.</p>
+        </div>
+        <div class="card paar">
+            <img src="https://via.placeholder.com/80?text=🌟" alt="Workshops">
+            <h3>Workshops & Retreats</h3>
+            <p>Gemeinsame Veranstaltungen für persönliche Weiterentwicklung und Energiearbeit.</p>
+        </div>
+        <div class="card paar">
+            <img src="https://via.placeholder.com/80?text=🕉️" alt="Tao der Sexualität">
+            <h3>Tao der Sexualität</h3>
+            <p>Erfahre energetische Verbindung und Heilung durch bewusstes Tao-Prinzip.</p>
+        </div>
+        <div class="card paar">
+            <img src="https://via.placeholder.com/80?text=💖" alt="Heiliger Raum der Dankbarkeit">
+            <h3>Der Heilige Raum der Dankbarkeit</h3>
+            <p>Erschaffe gemeinsam einen Raum voller Wertschätzung, Heilung und energetischer Klarheit.</p>
+        </div>
+    </div>
+
+    <div class="text-block" style="margin-top:40px;">
+        <p>
+            Wir von Beyond7 verbinden eigene Lebenserfahrung mit gesammeltem Wissen, klarem Verstand 
+            sowie Empathie, Herz und Menschlichkeit. Unsere Vision ist groß – so groß wie WIR. 
+            Fangen wir da an, wo wir stehen, und holen euch ab, wo ihr steht.
+        </p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>Schreib uns eine Nachricht: <a href="mailto:kontakt@beyond7.de">kontakt@beyond7.de</a></p>
+    <p>Folge uns auf Social Media: <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
+</section>
+
+<footer>
+    &copy; 2025 Beyond7. Alle Rechte vorbehalten.
+</footer>
+
+</body>
+</html>
