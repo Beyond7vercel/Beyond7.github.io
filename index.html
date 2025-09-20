@@ -3,12 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dana Boenker - Bewusstsein & Coaching</title>
+    <title>Beyond7 - Bewusstsein & Coaching</title>
     <style>
-        /* Grundlegendes Styling */
-        *, *::before, *::after {
-            box-sizing: border-box; /* verhindert Scroll-Rand */
-        }
+        *, *::before, *::after { box-sizing: border-box; }
         body {
             margin: 0;
             padding: 0;
@@ -16,7 +13,7 @@
             line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
-            overflow-x: hidden; /* verhindert horizontalen Scroll */
+            overflow-x: hidden;
         }
 
         /* Navigation */
@@ -37,17 +34,13 @@
             justify-content: flex-end;
             flex-wrap: wrap;
         }
-        nav li {
-            margin-left: 20px;
-        }
+        nav li { margin-left: 20px; }
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
+        nav a:hover { text-decoration: underline; }
 
         /* Header */
         header {
@@ -61,13 +54,8 @@
             text-align: center;
             padding: 0 20px;
         }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.5em;
-        }
+        header h1 { font-size: 3em; margin: 0; }
+        header p { font-size: 1.2em; margin-top: 20px; max-width: 700px; }
         .btn {
             display: inline-block;
             padding: 10px 20px;
@@ -75,161 +63,4 @@
             background-color: white;
             color: #4b6cb7;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        .btn:hover {
-            background-color: #e0e0e0;
-        }
-
-        /* Sections */
-        section {
-            padding: 80px 20px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-        section h2 {
-            color: #4b6cb7;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        /* Grid Cards */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            width: 100%;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .card img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-        }
-        .card h3 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ddd;
-            color: #555;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 1.2em;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav li {
-                margin: 10px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#recipes">Rezepte</a></li>
-            <li><a href="#energy">Energie & Medizin</a></li>
-            <li><a href="#coaching">Mentoring & Coaching</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <header id="home">
-        <h1>Willkommen auf meiner Seite</h1>
-        <p>Bewusstsein, gesunde Ernährung, Energie & persönliches Wachstum</p>
-        <a href="#about" class="btn">Mehr erfahren</a>
-    </header>
-
-    <section id="about">
-        <h2>Über mich</h2>
-        <p>Ich bin Dana Boenker und begleite Menschen auf ihrem Weg zu mehr Bewusstsein, Gesundheit und Lebensenergie. Hier kannst du deine persönliche Vorstellung einfügen und deine Philosophie erklären.</p>
-    </section>
-
-    <section id="recipes">
-        <h2>Rezepte & Ernährung</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Rezept 1">
-                <h3>Rezept 1</h3>
-                <p>Beschreibung von Rezept 1: Zutaten, Wirkung, Tipps.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Rezept 2">
-                <h3>Rezept 2</h3>
-                <p>Beschreibung von Rezept 2: Zutaten, Wirkung, Tipps.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Rezept 3">
-                <h3>Rezept 3</h3>
-                <p>Beschreibung von Rezept 3: Zutaten, Wirkung, Tipps.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="energy">
-        <h2>Energie & Medizin</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Energiearbeit">
-                <h3>Energiearbeit</h3>
-                <p>Beschreibung deiner Energiearbeit, Heilmethoden oder Techniken.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Medizin">
-                <h3>Energetische Medizin</h3>
-                <p>Beschreibung von energetischer Medizin oder ganzheitlichen Ansätzen.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="coaching">
-        <h2>Mentoring & Coaching</h2>
-        <div class="cards">
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Coaching 1">
-                <h3>Coaching 1</h3>
-                <p>Beschreibung deines Coachings: Zielgruppe, Methoden, Ergebnisse.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/400x200" alt="Mentoring 2">
-                <h3>Mentoring 2</h3>
-                <p>Beschreibung deines Mentorings: Fokus, Inhalte, Erfolgsgeschichten.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Schreib mir eine Nachricht: <a href="mailto:deine@email.de">deine@email.de</a></p>
-        <p>Oder folge mir auf Social Media: <a href="#">Instagram</a> | <a href="#">LinkedIn</a></p>
-    </section>
-
-    <footer>
-        &copy; 2025 Dana Boenker. Alle Rechte vorbehalten.
-    </footer>
-
-</body>
-</html>
+            font-weight: bold
