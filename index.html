@@ -13,7 +13,6 @@ body {
     line-height:1.6; 
     color:#fff; 
     overflow-x:hidden; 
-    /* statischer Pastell-Petrol-Hintergrund */
     background: linear-gradient(135deg, #7da5a5, #8fb8b8, #7da5a5);
     text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
 }
@@ -29,20 +28,39 @@ nav a:hover { color:#ff9c3c; text-decoration:underline; }
 header { min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; position:relative; }
 header .logo { display:flex; align-items:center; gap:15px; margin-bottom:20px; }
 header .logo img { width:70px; height:70px; }
-header h1 { font-weight:900; font-size:3em; color:#ffffff; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); margin:0; border:2px solid #ff9c3c; padding:5px 10px; border-radius:8px; }
+header h1 { font-weight:900; font-size:3em; color:#c0c0c0; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); margin:0; border:2px solid #ff9c3c; padding:5px 10px; border-radius:8px; }
 header p { font-size:1.2em; max-width:700px; line-height:1.6; text-shadow:1px 1px 5px rgba(0,0,0,0.4); }
 
-/* Buttons */
+/* 3D-Heilige-Geometrie Buttons */
 .btn {
-    display:inline-block; padding:18px 25px; margin:10px 10px 0 10px; font-weight:600; color:white; text-align:center;
-    border-radius:15%; 
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3), inset 0 -2px 4px rgba(255,255,255,0.15);
-    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
-    text-decoration:none;
+    display:inline-block;
+    padding:22px 30px;
+    font-weight:700;
+    color:white;
+    text-align:center;
     font-size:1em;
+    text-decoration:none;
+    perspective:1000px;
+    border-radius:12px;
+    position:relative;
+    transition: transform 0.5s, box-shadow 0.5s;
 }
-.btn:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.35), inset 0 -3px 6px rgba(255,255,255,0.2); filter: brightness(1.05); }
-/* Farblich einheitlich */
+.btn::before {
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    border-radius:12px;
+    background: inherit;
+    transform: rotateX(15deg) rotateY(15deg);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.35), inset 0 -2px 6px rgba(255,255,255,0.15);
+    transition: transform 0.5s, box-shadow 0.5s;
+    z-index:-1;
+}
+.btn:hover::before {
+    transform: rotateX(0deg) rotateY(0deg) translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.45), inset 0 -3px 8px rgba(255,255,255,0.2);
+}
+.btn span { position:relative; z-index:1; }
 .btn.sebastian { background: linear-gradient(135deg, #d68c36, #b76c12); }
 .btn.dana { background: linear-gradient(135deg, #008c8c, #00a0a0); }
 .btn.paar { background: linear-gradient(135deg,#008c8c,#d68c36); }
@@ -108,9 +126,9 @@ footer { text-align:center; padding:25px; background:#1a1a2e; color:#fff; }
         und authentisches Energiemanagement."
     </p>
     <div>
-        <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian">Sebastian Beratung</a>
-        <a href="https://t.me/Beyond7_Dana" class="btn dana">Dana Beratung</a>
-        <a href="https://t.me/Beyond7_Gemeinsam" class="btn paar">Paar Beratung</a>
+        <a href="https://t.me/Beyond7_Sebastian" class="btn sebastian"><span>Sebastian Beratung</span></a>
+        <a href="https://t.me/Beyond7_Dana" class="btn dana"><span>Dana Beratung</span></a>
+        <a href="https://t.me/Beyond7_Gemeinsam" class="btn paar"><span>Paar Beratung</span></a>
     </div>
 </header>
 
